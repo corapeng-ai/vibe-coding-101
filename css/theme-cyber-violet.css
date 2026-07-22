@@ -1,0 +1,17 @@
+:root {
+  --ink: #ffffff;
+  --bg: #0A071B;
+  --black: #120E29;
+  --blue: #8B5CF6;
+  --cyan: #EC4899;
+  --deep: #5B21B6;
+  --gold: #F59E0B;
+  --amber: #10B981;
+  --mono: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --p0: #1e1548;
+  --p1: #2e1a68;
+  --p2: #5B21B6;
+  --p3: #120933;
+  --p4: #28145a;
+  --p5: #3b1d7d;
+}
