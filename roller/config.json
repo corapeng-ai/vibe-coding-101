@@ -82,8 +82,7 @@
       "chapters": [
         { "name": "Singapore", "status": "active", "lat": 1.35, "lng": 103.82 },
         { "name": "Hong Kong", "status": "active", "lat": 22.3, "lng": 114.2 },
-        { "name": "Silicon Valley", "status": "coming-soon", "lat": 37.4, "lng": -122.0, "labelAbove": true },
-        { "name": "Los Angeles", "status": "coming-soon", "lat": 34.05, "lng": -118.24 }
+        { "name": "Silicon Valley", "status": "coming-soon", "lat": 37.4, "lng": -122.0, "labelAbove": true }
       ],
       "note": "Actively looking for leaders in <strong>Shanghai</strong> · <strong>Shenzhen</strong> · <strong>Tokyo</strong> · <strong>Taipei</strong>"
     },
