@@ -1,0 +1,66 @@
+<!-- SLIDE 35 — APPENDIX: Code Walkthrough -->
+<section class="slide" data-nav="A: Code Walkthrough">
+  <div class="slide-header pop">
+    <span class="badge badge-demo">Code</span>
+    <h1>The Full Orchestration</h1>
+    <h2>~60 lines of JavaScript orchestrate 10 agents end to end</h2>
+  </div>
+
+  <div class="duo pop" style="margin-top: clamp(8px, 1cqmin, 14px); gap: clamp(10px, 1.2cqmin, 16px);">
+    <div style="flex: 1;">
+      <div class="section-label">Research Fan-Out</div>
+      <div class="code-block" style="font-size: clamp(8.5px, .9cqmin, 10.5px); line-height: 1.65;"><span class="fn">phase</span>(<span class="str">'Intake'</span>)
+<span class="kw">const</span> profile = <span class="kw">await</span> <span class="fn">agent</span>(
+  intakePrompt(args.query),
+  { schema: PROFILE_SCHEMA }
+)
+
+<span class="fn">phase</span>(<span class="str">'Research'</span>)
+<span class="kw">const</span> [market, stocks, risk, news] =
+  <span class="kw">await</span> <span class="fn">parallel</span>([
+    () => <span class="fn">agent</span>(marketPrompt(profile),
+      { label: <span class="str">'market'</span>,
+        schema: MARKET_SCHEMA }),
+    () => <span class="fn">agent</span>(screenerPrompt(profile),
+      { label: <span class="str">'screener'</span>,
+        schema: STOCKS_SCHEMA }),
+    () => <span class="fn">agent</span>(riskPrompt(profile),
+      { label: <span class="str">'risk'</span>,
+        schema: RISK_SCHEMA }),
+    () => <span class="fn">agent</span>(newsPrompt(profile),
+      { label: <span class="str">'news'</span>,
+        schema: NEWS_SCHEMA }),
+  ])</div>
+    </div>
+    <div style="flex: 1;">
+      <div class="section-label">Build + Verify Loop</div>
+      <div class="code-block" style="font-size: clamp(8.5px, .9cqmin, 10.5px); line-height: 1.65;"><span class="fn">phase</span>(<span class="str">'Build Portfolio'</span>)
+<span class="kw">let</span> portfolio = <span class="kw">await</span> <span class="fn">agent</span>(
+  buildPrompt(profile, market,
+    stocks, risk, news),
+  { schema: PORTFOLIO_SCHEMA }
+)
+
+<span class="fn">phase</span>(<span class="str">'Verify'</span>)
+<span class="kw">let</span> round = <span class="num">0</span>
+<span class="kw">while</span> (round < <span class="num">2</span>) {
+  <span class="kw">const</span> verdicts = <span class="kw">await</span> <span class="fn">parallel</span>([
+    () => <span class="fn">agent</span>(skepticPrompt(
+      <span class="str">'concentration'</span>, portfolio)),
+    () => <span class="fn">agent</span>(skepticPrompt(
+      <span class="str">'bias'</span>, portfolio)),
+    () => <span class="fn">agent</span>(skepticPrompt(
+      <span class="str">'freshness'</span>, portfolio)),
+  ])
+  <span class="kw">const</span> issues = verdicts
+    .<span class="fn">filter</span>(v => v?.hasIssue)
+  <span class="kw">if</span> (!issues.length) <span class="kw">break</span>
+  portfolio = <span class="kw">await</span> <span class="fn">agent</span>(
+    revisePrompt(portfolio, issues))
+  round++
+}</div>
+    </div>
+  </div>
+
+  
+</section>

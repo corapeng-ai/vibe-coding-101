@@ -1,0 +1,79 @@
+<!-- SLIDE 37 — APPENDIX: Orchestration Patterns -->
+<section class="slide" data-nav="A: Orchestration Patterns">
+  <div class="slide-header pop">
+    <span class="badge badge-overview">Design</span>
+    <h1>Orchestration Patterns in This System</h1>
+    <h2>Five patterns composed into one coherent pipeline</h2>
+  </div>
+
+  <div style="padding: 0 9cqmin; margin-top: clamp(.8rem, 1.6cqmin, 1.4rem);" class="pop">
+    <table class="compare-table">
+      <tr>
+        <th style="width: 16%;">Pattern</th>
+        <th>Where Used</th>
+        <th>Why</th>
+        <th style="width: 10%;">Agents</th>
+      </tr>
+      <tr>
+        <td>
+          <span style="display: inline-block; background: rgba(96,165,250,.15); color: #60A5FA; padding: .15em .6em; border-radius: 10px; font-size: clamp(.5rem,.8cqmin,.7rem); font-weight: 700; white-space: nowrap;">SEQUENTIAL</span>
+        </td>
+        <td>Intake &rarr; Research &rarr; Build</td>
+        <td>Each phase depends on the previous phase's output</td>
+        <td>3 phases</td>
+      </tr>
+      <tr>
+        <td>
+          <span style="display: inline-block; background: rgba(167,139,250,.15); color: #A78BFA; padding: .15em .6em; border-radius: 10px; font-size: clamp(.5rem,.8cqmin,.7rem); font-weight: 700; white-space: nowrap;">FAN-OUT / FAN-IN</span>
+        </td>
+        <td>4 research agents in parallel</td>
+        <td>Research tasks are independent; parallelism cuts time 4x</td>
+        <td>4 parallel</td>
+      </tr>
+      <tr>
+        <td>
+          <span style="display: inline-block; background: rgba(252,165,165,.15); color: #FCA5A5; padding: .15em .6em; border-radius: 10px; font-size: clamp(.5rem,.8cqmin,.7rem); font-weight: 700; white-space: nowrap;">ADVERSARIAL</span>
+        </td>
+        <td>3 skeptics challenge portfolio</td>
+        <td>Catches concentration, bias, and stale data that builders miss</td>
+        <td>3 parallel</td>
+      </tr>
+      <tr>
+        <td>
+          <span style="display: inline-block; background: rgba(252,211,77,.15); color: #FCD34D; padding: .15em .6em; border-radius: 10px; font-size: clamp(.5rem,.8cqmin,.7rem); font-weight: 700; white-space: nowrap;">LOOP-UNTIL-DONE</span>
+        </td>
+        <td>Verify &rarr; Revise &rarr; Re-verify</td>
+        <td>Auto-fix flagged issues until all skeptics pass (max 2 rounds)</td>
+        <td>1-2 rounds</td>
+      </tr>
+      <tr>
+        <td>
+          <span style="display: inline-block; background: rgba(110,231,183,.15); color: #6EE7B7; padding: .15em .6em; border-radius: 10px; font-size: clamp(.5rem,.8cqmin,.7rem); font-weight: 700; white-space: nowrap;">HUMAN-IN-THE-LOOP</span>
+        </td>
+        <td>Final approval gate</td>
+        <td>Agents recommend; humans decide. No autonomous execution.</td>
+        <td>1 gate</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: clamp(.5rem, 1cqmin, .9rem); padding: 0 9cqmin; margin-top: clamp(.8rem, 1.8cqmin, 1.5rem);" class="pop">
+    <div class="metric">
+      <div class="label">Total Agents</div>
+      <div class="value">10</div>
+      <div class="sub">10 specialists + revision loop</div>
+    </div>
+    <div class="metric">
+      <div class="label">Parallel Efficiency</div>
+      <div class="value">75%</div>
+      <div class="sub">7 of 10 agents run in parallel batches</div>
+    </div>
+    <div class="metric">
+      <div class="label">Structured Output</div>
+      <div class="value">100%</div>
+      <div class="sub">Every agent returns typed JSON via schema</div>
+    </div>
+  </div>
+
+  
+</section>

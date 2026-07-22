@@ -1,0 +1,60 @@
+<!-- SLIDE 32 — APPENDIX: Research Agents -->
+<section class="slide" data-nav="A: Research Agents">
+  <div class="slide-header pop">
+    <span class="badge badge-research">Agents 2-5</span>
+    <h1>Research Phase: 4 Agents in Parallel</h1>
+    <h2>Each specialist searches the live web and returns structured findings</h2>
+  </div>
+
+  <div class="cards c2 pop" style="margin-top: clamp(10px, 1.4cqmin, 18px); gap: clamp(8px, 1cqmin, 14px);">
+    <!-- Market Research Agent -->
+    <div class="scope-card" style="--accent-color: #A78BFA;">
+      <h3>Market Research Agent</h3>
+      <p style="font-size: clamp(9px, 1cqmin, 11px); font-weight: 600; color: #A78BFA; padding-left: 6px; margin-bottom: 4px;">Web search: macro trends, sector outlook</p>
+      <p>Searches for current GDP, interest rate environment, sector-specific growth drivers and headwinds. Rates each sector's trend (strong growth / stable / declining) with confidence level.</p>
+      <div style="margin-top: 6px; padding-left: 6px;">
+        <span style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .5px;">Output:</span>
+        <span style="font-size: clamp(7.5px, .8cqmin, 9.5px); color: rgba(255,255,255,.55);"> outlook, sectors[], macroFactors[], risks[]</span>
+      </div>
+    </div>
+
+    <!-- Stock Screener Agent -->
+    <div class="scope-card" style="--accent-color: #A78BFA;">
+      <h3>Stock Screener Agent</h3>
+      <p style="font-size: clamp(9px, 1cqmin, 11px); font-weight: 600; color: #A78BFA; padding-left: 6px; margin-bottom: 4px;">Web search: equities by fundamentals</p>
+      <p>Screens for P/E &lt; 35, revenue growth &gt; 10%, market cap &gt; $5B. Adjusts for sector norms. Returns 12-15 real ticker candidates with approximate valuations and one-line rationale each.</p>
+      <div style="margin-top: 6px; padding-left: 6px;">
+        <span style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .5px;">Output:</span>
+        <span style="font-size: clamp(7.5px, .8cqmin, 9.5px); color: rgba(255,255,255,.55);"> candidates[{ticker, sector, peRatio, growth, reason}]</span>
+      </div>
+    </div>
+
+    <!-- Risk Analyst Agent -->
+    <div class="scope-card" style="--accent-color: #A78BFA;">
+      <h3>Risk Analyst Agent</h3>
+      <p style="font-size: clamp(9px, 1cqmin, 11px); font-weight: 600; color: #A78BFA; padding-left: 6px; margin-bottom: 4px;">Web search: volatility, correlation data</p>
+      <p>Assesses overall risk level, identifies specific risk factors with severity ratings. Analyzes correlation between target sectors. Estimates worst-case drawdown scenario.</p>
+      <div style="margin-top: 6px; padding-left: 6px;">
+        <span style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .5px;">Output:</span>
+        <span style="font-size: clamp(7.5px, .8cqmin, 9.5px); color: rgba(255,255,255,.55);"> overallRisk, factors[], correlationNotes, maxDrawdown</span>
+      </div>
+    </div>
+
+    <!-- News Sentiment Agent -->
+    <div class="scope-card" style="--accent-color: #A78BFA;">
+      <h3>News Sentiment Agent</h3>
+      <p style="font-size: clamp(9px, 1cqmin, 11px); font-weight: 600; color: #A78BFA; padding-left: 6px; margin-bottom: 4px;">Web search: headlines, earnings, red flags</p>
+      <p>Scans news from the last 30 days. Assesses sentiment per sector with top headlines. Flags red flags: pending earnings, regulatory changes, insider activity, supply chain issues.</p>
+      <div style="margin-top: 6px; padding-left: 6px;">
+        <span style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .5px;">Output:</span>
+        <span style="font-size: clamp(7.5px, .8cqmin, 9.5px); color: rgba(255,255,255,.55);"> overallSentiment, sectorSentiment[], redFlags[]</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout pop" style="background: rgba(167,139,250,.08); border: 1.5px solid rgba(167,139,250,.3); border-radius: 14px; padding: clamp(8px, 1cqmin, 14px) clamp(12px, 1.5cqmin, 20px); margin-top: clamp(8px, 1cqmin, 14px); text-align: center;">
+    <p style="font-size: clamp(10px, 1.1cqmin, 13px); font-weight: 600; color: var(--ink);">All 4 run simultaneously via <span style="font-family: 'JetBrains Mono', monospace; color: #A78BFA;">parallel()</span> &mdash; wall-clock time = slowest agent (~40s), not sum (160s)</p>
+  </div>
+
+  
+</section>

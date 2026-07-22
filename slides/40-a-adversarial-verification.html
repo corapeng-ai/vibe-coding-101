@@ -1,0 +1,79 @@
+<!-- SLIDE 34 — APPENDIX: Adversarial Verification -->
+<section class="slide" data-nav="A: Adversarial Verification">
+  <div class="slide-header pop">
+    <span class="badge badge-verify">Agents 7a-7c</span>
+    <h1>Adversarial Verification</h1>
+    <h2>Three independent skeptics challenge the portfolio. Default: flag if uncertain.</h2>
+  </div>
+
+  <div class="cards c3 pop" style="margin-top: clamp(10px, 1.2cqmin, 16px); gap: clamp(8px, 1cqmin, 14px);">
+    <!-- Skeptic 1 — Concentration Risk -->
+    <div style="background: rgba(248,113,113,.06); border: 1.5px solid rgba(248,113,113,.35); border-radius: 18px; padding: clamp(10px, 1.2cqmin, 16px);">
+      <div style="font-size: clamp(11px, 1.2cqmin, 14px); font-weight: 800; color: #F87171; margin-bottom: clamp(4px, .5cqmin, 8px);">Skeptic #1</div>
+      <div style="font-size: clamp(10px, 1.1cqmin, 13px); font-weight: 700; color: var(--ink); margin-bottom: clamp(6px, .7cqmin, 10px);">Concentration Risk</div>
+      <div style="font-size: clamp(8px, .85cqmin, 10px); color: rgba(255,255,255,.55); line-height: 1.7;">
+        Checks:<br>
+        &bull; Any single holding &gt; 15%?<br>
+        &bull; Any sector &gt; 30%?<br>
+        &bull; Top 3 combined &gt; 40%?<br>
+        &bull; Correlated sectors &gt; 50%?<br>
+        &bull; Risk tolerance match?
+      </div>
+      <div style="margin-top: clamp(8px, 1cqmin, 12px); background: rgba(248,113,113,.1); border: 1px solid rgba(248,113,113,.2); border-radius: 10px; padding: clamp(5px, .6cqmin, 8px) clamp(8px, 1cqmin, 12px); text-align: center;">
+        <div style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: #F87171; text-transform: uppercase; letter-spacing: .5px;">Example Verdict</div>
+        <div style="font-size: clamp(8px, .85cqmin, 10px); color: rgba(255,255,255,.55); margin-top: 2px;">FLAG (medium): Semis at 27%</div>
+      </div>
+    </div>
+
+    <!-- Skeptic 2 — Sector & Timing Bias -->
+    <div style="background: rgba(52,211,153,.06); border: 1.5px solid rgba(52,211,153,.35); border-radius: 18px; padding: clamp(10px, 1.2cqmin, 16px);">
+      <div style="font-size: clamp(11px, 1.2cqmin, 14px); font-weight: 800; color: #34D399; margin-bottom: clamp(4px, .5cqmin, 8px);">Skeptic #2</div>
+      <div style="font-size: clamp(10px, 1.1cqmin, 13px); font-weight: 700; color: var(--ink); margin-bottom: clamp(6px, .7cqmin, 10px);">Sector &amp; Timing Bias</div>
+      <div style="font-size: clamp(8px, .85cqmin, 10px); color: rgba(255,255,255,.55); line-height: 1.7;">
+        Checks:<br>
+        &bull; Chasing recent returns?<br>
+        &bull; All consensus favorites?<br>
+        &bull; Policy-dependent bets?<br>
+        &bull; Survive a 2022 drawdown?<br>
+        &bull; Defensive positioning?
+      </div>
+      <div style="margin-top: clamp(8px, 1cqmin, 12px); background: rgba(52,211,153,.1); border: 1px solid rgba(52,211,153,.2); border-radius: 10px; padding: clamp(5px, .6cqmin, 8px) clamp(8px, 1cqmin, 12px); text-align: center;">
+        <div style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: #34D399; text-transform: uppercase; letter-spacing: .5px;">Example Verdict</div>
+        <div style="font-size: clamp(8px, .85cqmin, 10px); color: rgba(255,255,255,.55); margin-top: 2px;">PASS: Good sector spread</div>
+      </div>
+    </div>
+
+    <!-- Skeptic 3 — Data Freshness -->
+    <div style="background: rgba(248,113,113,.06); border: 1.5px solid rgba(248,113,113,.35); border-radius: 18px; padding: clamp(10px, 1.2cqmin, 16px);">
+      <div style="font-size: clamp(11px, 1.2cqmin, 14px); font-weight: 800; color: #F87171; margin-bottom: clamp(4px, .5cqmin, 8px);">Skeptic #3</div>
+      <div style="font-size: clamp(10px, 1.1cqmin, 13px); font-weight: 700; color: var(--ink); margin-bottom: clamp(6px, .7cqmin, 10px);">Data Freshness</div>
+      <div style="font-size: clamp(8px, .85cqmin, 10px); color: rgba(255,255,255,.55); line-height: 1.7;">
+        Checks:<br>
+        &bull; Pending earnings?<br>
+        &bull; Pending regulation?<br>
+        &bull; Stale valuation data?<br>
+        &bull; Red flags ignored?<br>
+        &bull; Major upcoming events?
+      </div>
+      <div style="margin-top: clamp(8px, 1cqmin, 12px); background: rgba(248,113,113,.1); border: 1px solid rgba(248,113,113,.2); border-radius: 10px; padding: clamp(5px, .6cqmin, 8px) clamp(8px, 1cqmin, 12px); text-align: center;">
+        <div style="font-size: clamp(7px, .7cqmin, 9px); font-weight: 700; color: #F87171; text-transform: uppercase; letter-spacing: .5px;">Example Verdict</div>
+        <div style="font-size: clamp(8px, .85cqmin, 10px); color: rgba(255,255,255,.55); margin-top: 2px;">FLAG (low): SEDG earnings pending</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards c2 pop" style="margin-top: clamp(10px, 1.2cqmin, 16px); gap: clamp(8px, 1cqmin, 14px);">
+    <!-- Why Default to Flagging -->
+    <div class="callout" style="background: rgba(248,113,113,.06); border: 1px solid rgba(248,113,113,.2); border-radius: 14px; padding: clamp(10px, 1.2cqmin, 14px) clamp(12px, 1.5cqmin, 18px);">
+      <div style="font-size: clamp(8px, .8cqmin, 10px); font-weight: 800; color: #F87171; text-transform: uppercase; letter-spacing: 1px; margin-bottom: clamp(3px, .4cqmin, 5px);">Why "Default to Flagging"?</div>
+      <p style="font-size: clamp(8.5px, .9cqmin, 11px); color: rgba(255,255,255,.65); line-height: 1.6;">LLMs have a politeness bias. Without explicit instruction to be skeptical, a reviewer will say "looks good" to avoid conflict. The adversarial framing forces genuine challenge.</p>
+    </div>
+    <!-- Self-Healing Loop -->
+    <div class="callout" style="background: rgba(252,211,77,.06); border: 1px solid rgba(252,211,77,.2); border-radius: 14px; padding: clamp(10px, 1.2cqmin, 14px) clamp(12px, 1.5cqmin, 18px);">
+      <div style="font-size: clamp(8px, .8cqmin, 10px); font-weight: 800; color: #FCD34D; text-transform: uppercase; letter-spacing: 1px; margin-bottom: clamp(3px, .4cqmin, 5px);">Self-Healing Loop</div>
+      <p style="font-size: clamp(8.5px, .9cqmin, 11px); color: rgba(255,255,255,.65); line-height: 1.6;">If any skeptic flags an issue, a Revision Agent fixes the portfolio and re-runs verification. Max 2 rounds. This is the loop-until-done pattern in action.</p>
+    </div>
+  </div>
+
+  
+</section>

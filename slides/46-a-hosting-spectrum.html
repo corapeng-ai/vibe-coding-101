@@ -1,0 +1,89 @@
+<!-- SLIDE 40 — APPENDIX: Hosting Spectrum -->
+<section class="slide" data-nav="A: Hosting Spectrum">
+  <div class="slide-header pop">
+    <span class="badge badge-demo">Hosting</span>
+    <h1>Where Do Agents Run?</h1>
+    <h2>Three tiers &mdash; pick the simplest one that fits your use case</h2>
+  </div>
+
+  <div style="padding: 0 9cqmin; margin-top: clamp(.6rem, 1.4cqmin, 1.2rem);">
+    <div style="display: flex; gap: 0; margin-bottom: clamp(.6rem, 1.2cqmin, 1rem);" class="pop">
+      <div style="flex: 1; background: rgba(96,165,250,.1); border: 1px solid rgba(96,165,250,.3); border-radius: 18px 0 0 18px; padding: clamp(.6rem, 1.2cqmin, 1rem); text-align: center;">
+        <div style="font-size: clamp(.9rem, 1.7cqmin, 1.5rem); font-weight: 800; color: #60A5FA; margin-bottom: .2em;">Local / CLI</div>
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); color: rgba(255,255,255,.5);">Simplest</div>
+      </div>
+      <div style="flex: 1; background: rgba(167,139,250,.1); border: 1px solid rgba(167,139,250,.3); padding: clamp(.6rem, 1.2cqmin, 1rem); text-align: center;">
+        <div style="font-size: clamp(.9rem, 1.7cqmin, 1.5rem); font-weight: 800; color: #A78BFA; margin-bottom: .2em;">Server / API</div>
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); color: rgba(255,255,255,.5);">Production</div>
+      </div>
+      <div style="flex: 1; background: rgba(248,113,113,.1); border: 1px solid rgba(248,113,113,.3); border-radius: 0 18px 18px 0; padding: clamp(.6rem, 1.2cqmin, 1rem); text-align: center;">
+        <div style="font-size: clamp(.9rem, 1.7cqmin, 1.5rem); font-weight: 800; color: #F87171; margin-bottom: .2em;">Managed Platform</div>
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); color: rgba(255,255,255,.5);">Enterprise</div>
+      </div>
+    </div>
+
+    <table class="compare-table pop">
+      <tr>
+        <th style="width: 14%;"></th>
+        <th>Local / CLI</th>
+        <th>Server / API</th>
+        <th>Managed Platform</th>
+      </tr>
+      <tr>
+        <td class="name">How it runs</td>
+        <td>Your terminal session</td>
+        <td>Backend service (FastAPI, Express)</td>
+        <td>Cloud platform handles everything</td>
+      </tr>
+      <tr>
+        <td class="name">Persistence</td>
+        <td>Dies when you close terminal</td>
+        <td>Always-on, survives restarts</td>
+        <td>Always-on, auto-scaled</td>
+      </tr>
+      <tr>
+        <td class="name">State / retry</td>
+        <td>None (re-run from scratch)</td>
+        <td>Job queue (Celery, SQS) + DB</td>
+        <td>Built-in checkpoints and retries</td>
+      </tr>
+      <tr>
+        <td class="name">Who uses it</td>
+        <td>You, in your session</td>
+        <td>Users via API / web app</td>
+        <td>Enterprise teams at scale</td>
+      </tr>
+      <tr>
+        <td class="name">Infra needed</td>
+        <td>None</td>
+        <td>Docker, cloud hosting, API keys</td>
+        <td>Vendor account</td>
+      </tr>
+      <tr>
+        <td class="name">Examples</td>
+        <td>Claude Code Workflow()<br>This project</td>
+        <td>Python + Anthropic SDK<br>Node + OpenAI SDK</td>
+        <td>LangGraph Cloud<br>Amazon Bedrock Agents<br>Temporal + LLM calls</td>
+      </tr>
+      <tr>
+        <td class="name">When to use</td>
+        <td>Prototyping, demos,<br>personal tools</td>
+        <td>Multi-user apps,<br>production services</td>
+        <td>Enterprise scale,<br>compliance requirements</td>
+      </tr>
+    </table>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(.5rem, 1cqmin, .9rem); margin-top: clamp(.5rem, 1.1cqmin, .9rem);" class="pop">
+      <div class="callout" style="--accent-color: #60A5FA; background: rgba(96,165,250,.08); border: 1px solid rgba(96,165,250,.2);">
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #60A5FA; margin-bottom: .3em;">Start Here</div>
+        <p style="font-size: clamp(.55rem, .93cqmin, .82rem); color: rgba(255,255,255,.7); line-height: 1.6;">Get the workflow working locally first. Prove value. Then decide if you need a server. Most internal tools never need to leave the CLI.</p>
+      </div>
+      <div class="callout" style="--accent-color: #F87171; background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.2);">
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #F87171; margin-bottom: .3em;">Don't Over-Engineer</div>
+        <p style="font-size: clamp(.55rem, .93cqmin, .82rem); color: rgba(255,255,255,.7); line-height: 1.6;">Docker + Kubernetes + managed platform is for serving thousands of users. A team of 5 sharing a git repo and running Claude Code locally? That's fine. Ship it.</p>
+      </div>
+    </div>
+  </div>
+
+  
+</section>

@@ -1,0 +1,85 @@
+<!-- SLIDE 30 — APPENDIX: ARCHITECTURE -->
+<section class="slide" data-nav="A: ARCHITECTURE">
+  <div class="slide-header pop">
+    <span class="badge badge-overview">Architecture</span>
+    <h1>Full Agent Flow</h1>
+    <h2>From natural language input to verified, human-approved portfolio</h2>
+  </div>
+  <div class="slide-body">
+    <!-- Intake -->
+    <div class="pop" style="display:flex; justify-content:center; margin-bottom:6px; margin-top:10px;">
+      <div style="background:rgba(96,165,250,.1); border:2px solid rgba(96,165,250,.5); border-radius:10px; padding:10px 28px; text-align:center;">
+        <div style="font-size:clamp(10px,1.2cqmin,13px); font-weight:700; color:#60A5FA;">Intake Agent</div>
+        <div style="font-size:clamp(8px,.9cqmin,10px); color:rgba(255,255,255,.45);">NL query &rarr; {budget, risk, sectors, horizon}</div>
+      </div>
+    </div>
+    <div style="text-align:center; color:rgba(255,255,255,.2); font-size:16px; line-height:1;">&#x25BC;</div>
+
+    <!-- Research fan-out -->
+    <div class="pop" style="background:rgba(167,139,250,.06); border:1.5px dashed rgba(167,139,250,.35); border-radius:12px; padding:12px; margin-bottom:6px;">
+      <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#A78BFA; text-transform:uppercase; letter-spacing:1px; text-align:center; margin-bottom:8px;">parallel() &mdash; 4 Agents, Live Web Search</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:8px;">
+        <div style="background:rgba(167,139,250,.08); border:1.5px solid rgba(167,139,250,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">Market Research</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Macro, sector outlook</div>
+        </div>
+        <div style="background:rgba(167,139,250,.08); border:1.5px solid rgba(167,139,250,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">Stock Screener</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">P/E, growth, cap filter</div>
+        </div>
+        <div style="background:rgba(167,139,250,.08); border:1.5px solid rgba(167,139,250,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">Risk Analyst</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Vol, correlation, drawdown</div>
+        </div>
+        <div style="background:rgba(167,139,250,.08); border:1.5px solid rgba(167,139,250,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">News Sentiment</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Headlines, red flags</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; color:rgba(255,255,255,.2); font-size:16px; line-height:1;">&#x25BC;</div>
+
+    <!-- Portfolio Builder -->
+    <div class="pop" style="display:flex; justify-content:center; margin-bottom:6px;">
+      <div style="background:rgba(252,211,77,.1); border:2px solid rgba(252,211,77,.5); border-radius:10px; padding:10px 28px; text-align:center;">
+        <div style="font-size:clamp(10px,1.2cqmin,13px); font-weight:700; color:#FCD34D;">Portfolio Builder</div>
+        <div style="font-size:clamp(8px,.9cqmin,10px); color:rgba(255,255,255,.45);">Synthesize &rarr; 8-12 holdings, weighted allocation</div>
+      </div>
+    </div>
+    <div style="text-align:center; color:rgba(255,255,255,.2); font-size:16px; line-height:1;">&#x25BC;</div>
+
+    <!-- Skeptics -->
+    <div class="pop" style="background:rgba(252,165,165,.06); border:1.5px dashed rgba(252,165,165,.35); border-radius:12px; padding:12px; margin-bottom:6px;">
+      <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#FCA5A5; text-transform:uppercase; letter-spacing:1px; text-align:center; margin-bottom:8px;">parallel() &mdash; 3 Adversarial Skeptics</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+        <div style="background:rgba(252,165,165,.08); border:1.5px solid rgba(252,165,165,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">Concentration</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Single stock/sector caps</div>
+        </div>
+        <div style="background:rgba(252,165,165,.08); border:1.5px solid rgba(252,165,165,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">Bias Check</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Recency, sector chasing</div>
+        </div>
+        <div style="background:rgba(252,165,165,.08); border:1.5px solid rgba(252,165,165,.35); border-radius:8px; padding:8px; text-align:center;">
+          <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:var(--ink);">Data Freshness</div>
+          <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Pending events, stale data</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; color:rgba(255,255,255,.2); font-size:16px; line-height:1;">&#x25BC;</div>
+
+    <!-- Revise + Human -->
+    <div class="pop" style="display:flex; justify-content:center; gap:18px;">
+      <div style="background:rgba(252,211,77,.08); border:1.5px dashed rgba(252,211,77,.4); border-radius:10px; padding:10px 20px; text-align:center;">
+        <div style="font-size:clamp(9px,1cqmin,11px); font-weight:700; color:#FCD34D;">Revise (if issues)</div>
+        <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Max 2 rounds</div>
+      </div>
+      <div style="display:flex; align-items:center; color:rgba(255,255,255,.2); font-size:18px;">&rarr;</div>
+      <div style="background:rgba(110,231,183,.1); border:2px solid rgba(110,231,183,.5); border-radius:10px; padding:10px 28px; text-align:center;">
+        <div style="font-size:clamp(10px,1.2cqmin,13px); font-weight:700; color:#6EE7B7;">Human Approval</div>
+        <div style="font-size:clamp(8px,.9cqmin,10px); color:rgba(255,255,255,.45);">Approve / Adjust / Reject</div>
+      </div>
+    </div>
+  </div>
+  
+</section>

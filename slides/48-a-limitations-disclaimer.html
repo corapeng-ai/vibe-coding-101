@@ -1,0 +1,81 @@
+<!-- SLIDE 42 — APPENDIX: Limitations & Disclaimer -->
+<section class="slide" data-nav="A: Limitations & Disclaimer">
+  <div class="slide-header pop">
+    <span class="badge badge-important">Important</span>
+    <h1>This Is a Demo, Not Financial Advice</h1>
+    <h2>What you'd need to make it production-ready</h2>
+  </div>
+
+  <div style="padding: 0 9cqmin; margin-top: clamp(.4rem, 1cqmin, .85rem);">
+    <div class="disclaimer pop" style="background: rgba(248,113,113,.1); border: 2px solid rgba(248,113,113,.4); border-radius: 18px; padding: clamp(.6rem, 1.2cqmin, 1rem) clamp(.8rem, 1.5cqmin, 1.3rem); margin-bottom: clamp(.6rem, 1.4cqmin, 1.2rem);">
+      <p style="font-size: clamp(.65rem, 1.15cqmin, 1rem); font-weight: 700; color: #FCA5A5; line-height: 1.5;">This workflow is a technical demonstration of multi-agent orchestration patterns. It does not constitute investment advice and should not be used for real financial decisions.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(.8rem, 1.6cqmin, 1.4rem);">
+      <div class="pop">
+        <div class="section-label">What This Demo Does Not Do</div>
+        <ul class="check-list">
+          <li>
+            <span class="icon fail">&#x2717;</span>
+            <span>Know your existing portfolio or financial situation</span>
+          </li>
+          <li>
+            <span class="icon fail">&#x2717;</span>
+            <span>Use verified financial data APIs (uses web search only)</span>
+          </li>
+          <li>
+            <span class="icon fail">&#x2717;</span>
+            <span>Guarantee accuracy of any numbers (LLMs can hallucinate)</span>
+          </li>
+          <li>
+            <span class="icon fail">&#x2717;</span>
+            <span>Account for taxes, fees, or transaction costs</span>
+          </li>
+          <li>
+            <span class="icon fail">&#x2717;</span>
+            <span>Backtest against historical market data</span>
+          </li>
+        </ul>
+      </div>
+      <div class="pop">
+        <div class="section-label">What Production Would Require</div>
+        <ul class="check-list">
+          <li>
+            <span class="icon pass">&#x2713;</span>
+            <span>Real data APIs (Polygon.io, IEX Cloud, Bloomberg)</span>
+          </li>
+          <li>
+            <span class="icon pass">&#x2713;</span>
+            <span>User portfolio input (brokerage CSV or Plaid)</span>
+          </li>
+          <li>
+            <span class="icon pass">&#x2713;</span>
+            <span>Backtesting engine for portfolio validation</span>
+          </li>
+          <li>
+            <span class="icon pass">&#x2713;</span>
+            <span>Regulatory compliance (RIA registration, disclaimers)</span>
+          </li>
+          <li>
+            <span class="icon pass">&#x2713;</span>
+            <span>Deterministic fact-checking layer on LLM outputs</span>
+          </li>
+</ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(.5rem, 1cqmin, .9rem); margin-top: clamp(.5rem, 1.2cqmin, 1rem);" class="pop">
+      <div class="callout" style="--accent-color: #60A5FA; background: rgba(96,165,250,.08); border: 1px solid rgba(96,165,250,.2);">
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #60A5FA; margin-bottom: .3em;">Data Source Reality</div>
+        <p style="font-size: clamp(.55rem, .93cqmin, .82rem); color: rgba(255,255,255,.7); line-height: 1.6;">Web search returns unstructured, unverified data. Real financial products need timestamped feeds from licensed providers. Free options exist (Alpha Vantage, Yahoo Finance API) but have rate limits and no SLA.</p>
+      </div>
+      <div class="callout" style="--accent-color: #F87171; background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.2);">
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #F87171; margin-bottom: .3em;">The Real Value</div>
+        <p style="font-size: clamp(.55rem, .93cqmin, .82rem); color: rgba(255,255,255,.7); line-height: 1.6;">The patterns demonstrated here (fan-out research, adversarial verification, revision loops) are production-ready. The data pipeline is what needs replacing. The orchestration is the reusable part.</p>
+      </div>
+    </div>
+  </div>
+
+  
+</section>

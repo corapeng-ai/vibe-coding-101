@@ -1,0 +1,56 @@
+<!-- SLIDE 31 — APPENDIX: INTAKE AGENT -->
+<section class="slide" data-nav="A: INTAKE AGENT">
+  <div class="slide-header pop">
+    <span class="badge badge-intake">Agent 1</span>
+    <h1>Intake Agent</h1>
+    <h2>Parses natural language into a typed investment profile</h2>
+  </div>
+  <div class="slide-body">
+    <div class="duo" style="gap:20px; margin-top:16px;">
+      <div class="pop">
+        <div class="section-label">Input (Natural Language)</div>
+        <div style="background:rgba(96,165,250,.08); border:2px solid rgba(96,165,250,.35); border-radius:10px; padding:16px 20px; margin-top:8px;">
+          <p style="font-size:clamp(11px,1.3cqmin,15px); font-weight:500; color:var(--ink); line-height:1.6;">"I have <strong style="color:#60A5FA;">$100k</strong> to invest. <strong style="color:#60A5FA;">Moderate</strong> risk tolerance. Interested in <strong style="color:#60A5FA;">AI and clean energy</strong>. <strong style="color:#60A5FA;">5-year</strong> horizon."</p>
+        </div>
+
+        <div class="section-label" style="margin-top:18px;">What It Handles</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div class="scope-card" style="--accent-color:#60A5FA;">
+            <h3>Ambiguous Risk Levels</h3>
+            <p>"safe" &rarr; conservative, "balanced" &rarr; moderate, "growth" &rarr; aggressive</p>
+          </div>
+          <div class="scope-card" style="--accent-color:#60A5FA;">
+            <h3>Sector Normalization</h3>
+            <p>"tech" &rarr; Technology, "green" &rarr; Clean Energy, "crypto" &rarr; Cryptocurrency</p>
+          </div>
+          <div class="scope-card" style="--accent-color:#60A5FA;">
+            <h3>Missing Fields</h3>
+            <p>No budget? Default $10k. No horizon? Default 5yr. Always produces complete profile.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pop">
+        <div class="section-label">Output (Structured JSON)</div>
+        <div class="code-block" style="margin-top:8px; font-size:clamp(9px,1cqmin,11px);">{
+  <span class="str">"budget"</span>: <span class="num">100000</span>,
+  <span class="str">"riskTolerance"</span>: <span class="str">"moderate"</span>,
+  <span class="str">"sectors"</span>: [
+    <span class="str">"Artificial Intelligence"</span>,
+    <span class="str">"Clean Energy"</span>
+  ],
+  <span class="str">"timeHorizon"</span>: <span class="num">5</span>,
+  <span class="str">"constraints"</span>: [],
+  <span class="str">"summary"</span>: <span class="str">"Moderate-risk investor
+  with $100k targeting AI and
+  clean energy over 5 years"</span>
+}</div>
+
+        <div class="callout" style="margin-top:14px; border-color:rgba(96,165,250,.3); background:rgba(96,165,250,.08);">
+          <div style="font-size:clamp(8px,1cqmin,10px); font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:#60A5FA; margin-bottom:4px;">Why This Matters</div>
+          <p style="font-size:clamp(9px,1.1cqmin,12px); color:rgba(255,255,255,.7); line-height:1.6;">Typed output means downstream agents get clean, validated input. No parsing prose. Schema enforcement catches malformed data before it propagates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>

@@ -1,0 +1,64 @@
+<!-- SLIDE 38 — APPENDIX: How to Run -->
+<section class="slide" data-nav="A: How to Run">
+  <div class="slide-header pop">
+    <span class="badge badge-demo">Demo</span>
+    <h1>How to Run It</h1>
+    <h2>One command in Claude Code launches the full multi-agent pipeline</h2>
+  </div>
+
+  <div style="padding: 0 9cqmin; margin-top: clamp(.6rem, 1.2cqmin, 1rem);">
+    <div class="section-label pop">Invoke the Workflow</div>
+    <div class="code-block pop" style="font-size: clamp(.6rem, 1.05cqmin, .95rem); line-height: 1.8;"><span class="fn">Workflow</span>({
+  scriptPath: <span class="str">'investment-advisor.js'</span>,
+  args: {
+    query: <span class="str">"I have $100k to invest. Moderate risk.
+           Interested in AI and clean energy. 5-year horizon."</span>
+  }
+})</div>
+
+    <div class="section-label pop" style="margin-top: clamp(.6rem, 1.4cqmin, 1.2rem);">What Happens</div>
+    <ul class="step-list pop">
+      <li>
+        <div class="step-num" style="background: #60A5FA;">1</div>
+        <div class="step-text">
+          <span class="title">Intake agent parses your query</span>
+          <span class="desc"> &mdash; extracts budget, risk, sectors, horizon into typed JSON (~10s)</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num" style="background: #A78BFA;">2</div>
+        <div class="step-text">
+          <span class="title">4 research agents fan out in parallel</span>
+          <span class="desc"> &mdash; each searches the web for live market data (~40s)</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num" style="background: #FCD34D; color: rgba(0,0,0,.8);">3</div>
+        <div class="step-text">
+          <span class="title">Portfolio builder synthesizes all research</span>
+          <span class="desc"> &mdash; produces 10 holdings with weights and rationale (~20s)</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num" style="background: #F87171;">4</div>
+        <div class="step-text">
+          <span class="title">3 skeptics verify adversarially</span>
+          <span class="desc"> &mdash; flags get auto-fixed, max 2 revision rounds (~30s)</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num" style="background: #34D399; color: rgba(0,0,0,.8);">5</div>
+        <div class="step-text">
+          <span class="title">Final portfolio returned with full audit trail</span>
+          <span class="desc"> &mdash; profile, research, portfolio, verdicts, metadata</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="callout pop" style="--accent-color: #A78BFA; background: rgba(167,139,250,.08); border: 1px solid rgba(167,139,250,.2); margin-top: clamp(.5rem, 1.2cqmin, 1rem); text-align: center; padding: clamp(.5rem, 1cqmin, .9rem) clamp(.8rem, 1.5cqmin, 1.3rem);">
+      <p style="font-size: clamp(.7rem, 1.15cqmin, 1rem); font-weight: 700; color: var(--ink);">Total time: <span style="color: #A78BFA;">~90 seconds</span> &mdash; vs 2-3 hours manually</p>
+    </div>
+  </div>
+
+  
+</section>

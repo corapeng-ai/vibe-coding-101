@@ -1,0 +1,76 @@
+<!-- SLIDE 29 — APPENDIX: SYSTEM OVERVIEW -->
+<section class="slide" data-nav="A: SYSTEM OVERVIEW">
+  <div class="slide-header pop">
+    <span class="badge badge-overview">System Overview</span>
+    <h1>How It Works</h1>
+    <h2>One natural language query triggers a 5-phase multi-agent pipeline</h2>
+  </div>
+  <div class="slide-body">
+    <div class="pop" style="display:flex; gap:12px; margin-top:16px;">
+      <div class="metric">
+        <div class="label">Total Agents</div>
+        <div class="value">10</div>
+        <div class="sub">Specialists with narrow, focused roles</div>
+      </div>
+      <div class="metric">
+        <div class="label">Parallel Phases</div>
+        <div class="value">2</div>
+        <div class="sub">Research (4x) and verification (3x)</div>
+      </div>
+      <div class="metric">
+        <div class="label">Wall Clock</div>
+        <div class="value">&lt; 2 min</div>
+        <div class="sub">Parallelism cuts 8 agents to 2 rounds</div>
+      </div>
+      <div class="metric">
+        <div class="label">Human Gates</div>
+        <div class="value">1</div>
+        <div class="sub">Final approval before any action</div>
+      </div>
+    </div>
+
+    <div class="phase-flow pop" style="margin:20px 0 14px;">
+      <div class="pf" style="flex:1; background:rgba(96,165,250,.12); border-radius:10px 0 0 10px;">
+        <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#60A5FA; letter-spacing:.6px;">PHASE 1</div>
+        <div style="font-size:clamp(9px,1.1cqmin,12px); font-weight:700; color:var(--ink); margin-top:3px;">Intake</div>
+        <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">1 agent &middot; ~10s</div>
+      </div>
+      <div class="pf" style="flex:2.5; background:rgba(167,139,250,.12);">
+        <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#A78BFA; letter-spacing:.6px;">PHASE 2</div>
+        <div style="font-size:clamp(9px,1.1cqmin,12px); font-weight:700; color:var(--ink); margin-top:3px;">Research (Parallel)</div>
+        <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">4 agents &middot; ~40s</div>
+      </div>
+      <div class="pf" style="flex:1; background:rgba(252,211,77,.12);">
+        <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#FCD34D; letter-spacing:.6px;">PHASE 3</div>
+        <div style="font-size:clamp(9px,1.1cqmin,12px); font-weight:700; color:var(--ink); margin-top:3px;">Build</div>
+        <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">1 agent &middot; ~20s</div>
+      </div>
+      <div class="pf" style="flex:2; background:rgba(252,165,165,.12);">
+        <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#FCA5A5; letter-spacing:.6px;">PHASE 4</div>
+        <div style="font-size:clamp(9px,1.1cqmin,12px); font-weight:700; color:var(--ink); margin-top:3px;">Verify (Parallel)</div>
+        <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">3 skeptics &middot; ~30s</div>
+      </div>
+      <div class="pf" style="flex:1; background:rgba(110,231,183,.12); border-radius:0 10px 10px 0;">
+        <div style="font-size:clamp(7px,.8cqmin,9px); font-weight:700; color:#6EE7B7; letter-spacing:.6px;">PHASE 5</div>
+        <div style="font-size:clamp(9px,1.1cqmin,12px); font-weight:700; color:var(--ink); margin-top:3px;">Human Gate</div>
+        <div style="font-size:clamp(7px,.8cqmin,9px); color:rgba(255,255,255,.4);">Approve / Reject</div>
+      </div>
+    </div>
+
+    <div class="pop" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:12px;">
+      <div class="scope-card" style="--accent-color:#A78BFA;">
+        <h3>Live Data</h3>
+        <p>Every research agent uses web search. No stale training data. Real tickers, real fundamentals, real news.</p>
+      </div>
+      <div class="scope-card" style="--accent-color:#FCA5A5;">
+        <h3>Adversarial Verification</h3>
+        <p>3 independent skeptics challenge the portfolio from different angles. Only claims that survive make the cut.</p>
+      </div>
+      <div class="scope-card" style="--accent-color:#6EE7B7;">
+        <h3>Human Final Say</h3>
+        <p>Agents research and recommend. The human decides and authorizes. No autonomous execution.</p>
+      </div>
+    </div>
+  </div>
+  
+</section>

@@ -1,0 +1,61 @@
+<!-- SLIDE 39 — APPENDIX: Sharing & Hosting -->
+<section class="slide" data-nav="A: Sharing & Hosting">
+  <div class="slide-header pop">
+    <span class="badge badge-demo">Sharing</span>
+    <h1>How to Share Skills &amp; Workflows</h1>
+    <h2>Git is all you need. No Docker, no infrastructure, no deployment.</h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(.8rem, 1.6cqmin, 1.4rem); padding: 0 9cqmin; margin-top: clamp(.6rem, 1.2cqmin, 1rem);">
+    <div>
+      <div class="section-label pop">What You Ship (Just Files)</div>
+      <div class="code-block pop" style="font-size: clamp(.55rem, .93cqmin, .82rem); line-height: 1.7;">investment-advisor/
+  investment-advisor.js   <span class="cm"># workflow script</span>
+  skills/
+    intake-agent.md       <span class="cm"># agent prompts</span>
+    market-research.md    <span class="cm"># + schemas</span>
+    stock-screener.md     <span class="cm"># + examples</span>
+    risk-analyst.md
+    news-sentiment.md
+    portfolio-builder.md
+    adversarial-skeptic.md
+  portal.html             <span class="cm"># visualization</span>
+  presentation.html       <span class="cm"># slides</span></div>
+
+      <div class="section-label pop" style="margin-top: clamp(.5rem, 1.2cqmin, 1rem);">How Others Use It</div>
+      <div class="code-block pop" style="font-size: clamp(.55rem, .93cqmin, .82rem); line-height: 1.7;"><span class="cm"># Clone the repo</span>
+git clone &lt;repo&gt;/investment-advisor
+
+<span class="cm"># (Optional) Install skills globally</span>
+cp skills/* ~/.claude/skills/
+
+<span class="cm"># Run the workflow</span>
+<span class="fn">Workflow</span>({ scriptPath: <span class="str">'investment-advisor.js'</span> })</div>
+    </div>
+
+    <div>
+      <div class="section-label pop">Where to Host the Repo</div>
+      <div style="display: flex; flex-direction: column; gap: clamp(.3rem, .7cqmin, .6rem);">
+        <div class="scope-card pop" style="--accent-color: #A78BFA;">
+          <h3>Internal Team &rarr; GitLab</h3>
+          <p>Your company's existing Git. Access controls, CI/CD, code review. Standard for enterprise teams.</p>
+        </div>
+        <div class="scope-card pop" style="--accent-color: #60A5FA;">
+          <h3>Public / Community &rarr; GitHub</h3>
+          <p>Conference attendees, open-source. GitHub is the default for discoverability and community sharing.</p>
+        </div>
+        <div class="scope-card pop" style="--accent-color: #34D399;">
+          <h3>Both</h3>
+          <p>Internal GitLab for proprietary workflows. Public GitHub for conference materials and templates others can fork.</p>
+        </div>
+      </div>
+
+      <div class="callout pop" style="--accent-color: #A78BFA; background: rgba(167,139,250,.08); border: 1px solid rgba(167,139,250,.2); margin-top: clamp(.4rem, .8cqmin, .7rem);">
+        <div style="font-size: clamp(.45rem, .78cqmin, .68rem); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #A78BFA; margin-bottom: .3em;">Key Insight</div>
+        <p style="font-size: clamp(.55rem, .93cqmin, .82rem); color: rgba(255,255,255,.7); line-height: 1.6;">Skills are markdown. Workflows are JavaScript. They travel with your repo. Anyone who clones it can run it. No deployment step.</p>
+      </div>
+    </div>
+  </div>
+
+  
+</section>

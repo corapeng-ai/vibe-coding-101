@@ -1,0 +1,19 @@
+<section class="slide" data-nav="Tips">
+    <span class="badge pop">TIP #1</span>
+    <h2 class="pop">Prompt <span class="hl">Engineering</span> 101</h2>
+    <div style="display:grid;grid-template-columns:3fr 7fr;gap:4cqmin;margin-top:3cqmin;align-items:stretch" class="pop">
+      <!-- Left: tips, each with a unique color -->
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:1.6cqmin 2.4cqmin;font-size:clamp(20px,3.4cqmin,42px);line-height:1.5;align-content:start">
+        <span style="color:#4ADE80;font-weight:800">01</span><span style="color:#4ADE80">Give context</span>
+        <span style="color:#FF7043;font-weight:800">02</span><span style="color:#FF7043">Be specific</span>
+        <span style="color:#00B0F0;font-weight:800">03</span><span style="color:#00B0F0">Think step-by-step</span>
+        <span style="color:#C084FC;font-weight:800">04</span><span style="color:#C084FC">Iterate in conversation</span>
+        <span style="color:#FCD830;font-weight:800">05</span><span style="color:#FCD830">Use examples</span>
+      </div>
+      <!-- Right: strong prompt only, with color-coded highlights -->
+      <div style="background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.12);border-radius:16px;padding:2.4cqmin 2.8cqmin;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:clamp(11px,1.5cqmin,16px);font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:1.2cqmin">EXAMPLE PROMPT</div>
+        <div style="font-size:clamp(18px,2.8cqmin,38px);line-height:1.8">"<span style="color:#4ADE80">This is a Next.js 14 app with a Supabase backend.</span> <span style="color:#FF7043">The login page at /app/login/page.tsx needs a 'Forgot Password' flow.</span> <span style="color:#00B0F0">First</span>, add a link below the form. <span style="color:#00B0F0">Then</span>, create a modal that calls <span style="color:#FF7043">supabase.auth.resetPasswordForEmail()</span>. <span style="color:#00B0F0">Finally</span>, show a toast using our <span style="color:#C084FC">existing useToast() hook</span>. <span style="color:#FCD830">Like how Vercel does it.</span>"</div>
+      </div>
+    </div>
+  </section>
