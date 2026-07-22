@@ -1,0 +1,129 @@
+{
+  "event": {
+    "name": "Vibe Coding 101: Your First AI Build Starts Here",
+    "subtitle": "Lunatechs Singapore X SMU AI",
+    "date": "2026-07-22"
+  },
+  "frame": {
+    "link": {
+      "image": "https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https%3A%2F%2Fchat.whatsapp.com%2FKoThLSBd2p93Z2kh2kXjkL%3Fs%3Dcl%26p%3Di%26ilr%3D4",
+      "label": "Lunatechs SG WhatsApp",
+      "channels": [
+        "WhatsApp",
+        "Instagram",
+        "YouTube",
+        "LinkedIn",
+        "Email",
+        "Web"
+      ]
+    }
+  },
+  "defaultDuration": 7000,
+  "transitionDuration": 800,
+  "slides": [
+    {
+      "type": "image",
+      "src": "../images/vibe-coding-banner.jpg",
+      "fit": "contain",
+      "caption": "Vibe Coding 101 — Building Your First AI App"
+    },
+    {
+      "type": "manifesto",
+      "duration": 32000,
+      "title": "Here's to the lunatics...",
+      "lines": [
+        "The ones who genuinely love technology.",
+        "Not just for the gadgets — but for what it can do.",
+        "",
+        "The ones who get a little too excited about what's next.",
+        "Who believe the future isn't something you wait for…",
+        "it's something you build.",
+        "",
+        "The ones who believe you don't need to be a genius or rich to make a difference…",
+        "Just curious.",
+        "Just hopeful.",
+        "Just willing to get to work.",
+        "",
+        "Because the people crazy enough to think technology can change the world for the better…",
+        "",
+        "are the ones who do."
+      ]
+    },
+    {
+      "type": "about",
+      "duration": 8000,
+      "title": "Who is Lunatechs?",
+      "tagline": "Your tribe of Technology Lunatics.",
+      "cards": [
+        { "label": "Charter", "val": "Build. Learn. Share. Connect." },
+        { "label": "Mission", "val": "Change the world." },
+        { "label": "Events", "val": "Hikes, Meetups, Hackathons, Excursions" }
+      ]
+    },
+    {
+      "type": "upcoming",
+      "duration": 9000,
+      "title": "Upcoming Events",
+      "events": [
+        {
+          "name": "Claude Code Workshop: Build an AI Intelligence Agent",
+          "date": "TBD",
+          "detail": "Hands-on Workshop",
+          "status": "coming-soon"
+        },
+        {
+          "name": "Café Hoppers X Lunatechs: Coffee + AI Photo Editing Intro",
+          "date": "TBD",
+          "detail": "Collab Meetup",
+          "status": "coming-soon"
+        },
+        {
+          "name": "AI Virtual Idols and Influencers",
+          "date": "TBD",
+          "detail": "Signature Event",
+          "status": "coming-soon"
+        },
+        {
+          "name": "Tech Trip: Shenzhen Robotics Field Trip",
+          "date": "TBD",
+          "detail": "Field Trip",
+          "status": "coming-soon"
+        }
+      ],
+      "footer": "Looking for Speakers, Sponsors & Venues!"
+    },
+    {
+      "type": "roles",
+      "duration": 7000,
+      "title": "Join Us!",
+      "subtitle": "Help build the Lunatechs community",
+      "roles": [
+        "Event Organizer",
+        "Community Outreach",
+        "Event Volunteer",
+        "Social Media Manager",
+        "Web Developer"
+      ],
+      "contact": "info@lunatechs.social"
+    },
+    {
+      "type": "chapters",
+      "duration": 9000,
+      "title": "Start a New Chapter",
+      "subtitle": "Bring Lunatechs to your city",
+      "chapters": [
+        { "name": "Singapore", "status": "active", "lat": 1.35, "lng": 103.82 },
+        { "name": "Hong Kong", "status": "active", "lat": 22.3, "lng": 114.2 },
+        { "name": "Silicon Valley", "status": "coming-soon", "lat": 37.4, "lng": -122.0, "labelAbove": true },
+        { "name": "Los Angeles", "status": "coming-soon", "lat": 34.05, "lng": -118.24 }
+      ],
+      "note": "Actively looking for leaders in <strong>Shanghai</strong> · <strong>Shenzhen</strong> · <strong>Tokyo</strong> · <strong>Taipei</strong>"
+    },
+    {
+      "type": "partners",
+      "duration": 7000,
+      "title": "Thank You to Our Partners",
+      "image": "../images/partners.png"
+    }
+  ]
+}

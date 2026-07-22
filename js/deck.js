@@ -88,6 +88,7 @@ const stage=document.getElementById('stage');
     if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();show(i-1)}
     if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1);
     if(e.key==='f'||e.key==='F')toggleFull();
+    if(e.key==='r'||e.key==='R'){location.href='roller/index.html';}
     if(e.key==='p'||e.key==='P'){e.preventDefault();window.print()}
     if(e.key==='Escape')closeMenu();
   });
@@ -102,6 +103,7 @@ const stage=document.getElementById('stage');
     else if(a==='edit'){toggleEdit();closeMenu();}
     else if(a==='full')toggleFull();
     else if(a==='print')window.print();
+    else if(a==='roller')location.href='roller/index.html';
   });
   let sx=null;
   addEventListener('touchstart',e=>sx=e.touches[0].clientX);
